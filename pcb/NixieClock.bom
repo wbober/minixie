@@ -1,0 +1,33 @@
+Partlist exported from C:/Users/Wojtek/Projekty/Minixie/pcb/NixieClock_v4/NixieClock.sch at 25/03/2012 09:08:02
+
+Qty Value        Device          Parts                                             
+1                MA05-2          ISP                                               
+1                MA06-1          SV3                                               
+1                MA07-1          SV2                                               
+1                MA10-1          SV1                                               
+1                PINHD-1X2       JP1                                               
+1                PINHD-1X3       JP2                                               
+1   0.1F         CPOL-EUE5-13    C9                                                
+1   0.47uF/250V  C10/6           C11                                               
+1   1.5k         R-EU_0204/5     R7                                                
+1   1N4148DO35-7 1N4148DO35-7    D3                                                
+1   4,7uF/250V   CPOL-EUTT5D10   C12                                               
+1   4k7          R-EU_0204/5     R9                                                
+1   10k          R-EU_0204/7     R5                                                
+1   10mH         L-US0204/5      L1                                                
+1   10mH         L-US0207/10     L3                                                
+1   10uF/25V     CPOL-EUE2.5-6   C17                                               
+1   22uF/25V     CPOL-EUE3.5-10  C14                                               
+1   32kHz        XTAL            Q1                                                
+1   100k         R-EU_0204/5     R2                                                
+12  100nF        C-EU025-025X050 C1, C2, C3, C4, C5, C6, C7, C8, C10, C13, C16, C19
+1   120k         R-EU_0204/5     R6                                                
+1   270k         R-EU_0204/5     R1                                                
+1   2200uH       L-US6000-XXX-RC L4                                                
+1   7805L        7805L           IC3                                               
+1   74141N       74141N          IC4                                               
+1   DCJ0202      DCJ0202         J1                                                
+1   IRF740       IRF740          Q3                                                
+1   KSS1201      KSS1201         SP1                                               
+1   MEGA8-P      MEGA8-P         IC1                                               
+1   UF4003       UF4003          D1                                                

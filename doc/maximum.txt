@@ -1,0 +1,7 @@
+Imax (7805): dla Vin=12 
+             
+             500mW/7V = 71mA ~ 50mA
+
+CPU max: 15mA
+BUZZ:
+IRF:
