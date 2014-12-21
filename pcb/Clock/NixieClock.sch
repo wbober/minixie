@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -21822,6 +21822,15 @@ naming: grid - package width</description>
 <text x="-3.5" y="4.5" size="1.27" layer="21">&gt;NAME</text>
 <text x="-3.5" y="-5.5" size="1.27" layer="21">&gt;VALUE</text>
 </package>
+<package name="1220">
+<circle x="0" y="0" radius="7.5" width="0.127" layer="21"/>
+<pad name="-" x="0" y="0" drill="1.1" diameter="2.54"/>
+<pad name="+" x="-6.35" y="-3.81" drill="1.1" diameter="2.54"/>
+<hole x="0" y="-6.5" drill="1"/>
+<hole x="-5.6" y="3.2" drill="1"/>
+<hole x="5.6" y="3.2" drill="1"/>
+<circle x="0" y="0" radius="6.5" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="INDUCTOR">
@@ -21837,6 +21846,14 @@ naming: grid - package width</description>
 <text x="3.81" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="2" x="0" y="-7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 <pin name="1" x="0" y="7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+</symbol>
+<symbol name="BAT">
+<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.794" y1="-1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.794" y1="-3.81" x2="2.54" y2="-3.81" width="0.254" layer="94"/>
+<pin name="P$1" x="0" y="2.54" visible="off" length="short" rot="R270"/>
+<pin name="P$2" x="0" y="-6.35" visible="off" length="short" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -21859,6 +21876,23 @@ naming: grid - package width</description>
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BAT1220THT">
+<description>Based on CH23-1220LF drawing</description>
+<gates>
+<gate name="G$1" symbol="BAT" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="1220">
+<connects>
+<connect gate="G$1" pin="P$1" pad="+"/>
+<connect gate="G$1" pin="P$2" pad="-"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -22532,7 +22566,6 @@ W = angled&lt;p&gt;
 <part name="C7" library="rcl" deviceset="C-EU" device="025-025X050" value="27pF"/>
 <part name="C9" library="rcl" deviceset="C-EU" device="025-025X050" value="27pF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="C14" library="rcl" deviceset="CPOL-EU" device="E5-13" value="0.1F"/>
 <part name="D2" library="diode" deviceset="1N4148" device="DO35-7" value="BAT85"/>
 <part name="C8" library="rcl" deviceset="C-EU" device="050-025X075" value="100nF"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
@@ -22541,7 +22574,6 @@ W = angled&lt;p&gt;
 <part name="L2" library="WB" deviceset="RADIAL-CHOKE" device="4MM" value="330uH"/>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="Q1" library="transistor-power" deviceset="PMOSFET_N" device="TO220BH" value="IRF710"/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="0204/5" value="100"/>
 <part name="C5" library="Various" deviceset="CPOL-EU" device="" value="4.7uF/250V"/>
 <part name="JP4" library="pinhead" deviceset="PINHD-1X6" device="/90"/>
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
@@ -22555,6 +22587,8 @@ W = angled&lt;p&gt;
 <part name="V3" library="supply2" deviceset="VCC" device=""/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="0204/5" value="10"/>
 <part name="V2" library="supply2" deviceset="VCC" device=""/>
+<part name="U$3" library="WB" deviceset="BAT1220THT" device=""/>
+<part name="D5" library="diode" deviceset="1N4148" device="DO35-7" value="BAT85"/>
 </parts>
 <sheets>
 <sheet>
@@ -22613,7 +22647,6 @@ W = angled&lt;p&gt;
 <instance part="C7" gate="G$1" x="15.24" y="213.36" rot="R90"/>
 <instance part="C9" gate="G$1" x="15.24" y="203.2" rot="R90"/>
 <instance part="GND9" gate="1" x="-7.62" y="111.76"/>
-<instance part="C14" gate="G$1" x="-144.78" y="147.32"/>
 <instance part="D2" gate="G$1" x="-157.48" y="160.02"/>
 <instance part="C8" gate="G$1" x="193.04" y="210.82" rot="R180"/>
 <instance part="GND4" gate="1" x="193.04" y="205.74"/>
@@ -22625,7 +22658,6 @@ W = angled&lt;p&gt;
 <instance part="L2" gate="G$1" x="-200.66" y="226.06" rot="R90"/>
 <instance part="FRAME1" gate="G$1" x="-33.02" y="78.74"/>
 <instance part="Q1" gate="G$1" x="-187.96" y="208.28"/>
-<instance part="R5" gate="G$1" x="-144.78" y="154.94" rot="R90"/>
 <instance part="C5" gate="G$1" x="-157.48" y="213.36" smashed="yes">
 <attribute name="NAME" x="-155.1686" y="205.867" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-159.7406" y="205.867" size="1.778" layer="96" rot="R90"/>
@@ -22642,6 +22674,8 @@ W = angled&lt;p&gt;
 <instance part="V3" gate="G$1" x="-124.46" y="233.68"/>
 <instance part="R9" gate="G$1" x="-200.66" y="205.74" rot="R180"/>
 <instance part="V2" gate="G$1" x="2.54" y="246.38"/>
+<instance part="U$3" gate="G$1" x="-144.78" y="149.86"/>
+<instance part="D5" gate="G$1" x="-144.78" y="154.94" rot="R90"/>
 </instances>
 <busses>
 <bus name="D[1..10]">
@@ -22822,7 +22856,6 @@ W = angled&lt;p&gt;
 <pinref part="IC3" gate="A1" pin="GND"/>
 <pinref part="C12" gate="G$1" pin="1"/>
 <pinref part="C11" gate="G$1" pin="-"/>
-<pinref part="C14" gate="G$1" pin="-"/>
 <pinref part="J1" gate="G$1" pin="3"/>
 <wire x1="-215.9" y1="152.4" x2="-213.36" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="2"/>
@@ -22830,6 +22863,8 @@ W = angled&lt;p&gt;
 <wire x1="-215.9" y1="149.86" x2="-213.36" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="-213.36" y1="149.86" x2="-213.36" y2="152.4" width="0.1524" layer="91"/>
 <junction x="-213.36" y="152.4"/>
+<wire x1="-144.78" y1="142.24" x2="-144.78" y2="143.51" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="4"/>
@@ -23279,8 +23314,9 @@ W = angled&lt;p&gt;
 <wire x1="-154.94" y1="160.02" x2="-144.78" y2="160.02" width="0.1524" layer="91"/>
 <label x="-139.7" y="160.02" size="1.27" layer="95" xref="yes"/>
 <pinref part="D2" gate="G$1" pin="C"/>
-<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="D5" gate="G$1" pin="C"/>
 <wire x1="-144.78" y1="160.02" x2="-139.7" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="157.48" x2="-144.78" y2="160.02" width="0.1524" layer="91"/>
 <junction x="-144.78" y="160.02"/>
 </segment>
 <segment>
@@ -23331,12 +23367,6 @@ W = angled&lt;p&gt;
 <pinref part="R8" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="C14" gate="G$1" pin="+"/>
-</segment>
-</net>
 <net name="RXD" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="PD0(RXD)"/>
@@ -23369,6 +23399,12 @@ W = angled&lt;p&gt;
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="-193.04" y1="205.74" x2="-195.58" y2="205.74" width="0.1524" layer="91"/>
 <junction x="-193.04" y="205.74"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="P$1"/>
+<pinref part="D5" gate="G$1" pin="A"/>
 </segment>
 </net>
 </nets>
