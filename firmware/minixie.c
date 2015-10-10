@@ -400,7 +400,6 @@ static void check_buttons(void)
 			ctx.time.hh = (ctx.time.hh < 23) ? ctx.time.hh + 1 : 0;
 		}
 	}
-	/*
 	if (BTN_MM == 0) {
 		// debounce
 		_delay_ms(20);
@@ -408,7 +407,6 @@ static void check_buttons(void)
 			ctx.time.mm = (ctx.time.mm < 59) ? ctx.time.mm + 1 : 0;
 		}
 	}
-	*/
 }
 
 /**
