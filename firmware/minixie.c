@@ -164,18 +164,12 @@ static void hw_init(void)
 	// set the digit pins as an output
 	DDRC = _BV(PC0) | _BV(PC1) | _BV(PC2) | _BV(PC3);
 	
-	// set btn pins as pulled-up an input
-	//PORTD = _BV(PD2) | _BV(PD3) | _BV(PD4);
-	PORTD = _BV(PD4);
-	PORTB = _BV(PB0);
-
-	// BTN1 as output (low)
-	DDRD |= _BV(PD3); // for dcf power ctrl
+	// enable pull-ups on button inputs
+	PORTD = _BV(PD3) | _BV(PD4);
 	
 	// Enable IRQ0 on PD2 
 	MCUCR |= _BV(ISC00);
 	GICR |= _BV(INT0);
-
 
 	// Tubes' mux timer
 	// generate an IRQ on overflow
