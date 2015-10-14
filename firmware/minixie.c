@@ -58,12 +58,14 @@ static const pad_t const digit_pad_map[] = {
 
 static const pad_t buzzer_pad = PAD(&PORTB, 2);
 
+#if ADAPTIVE_DC == 1
 static const uint16_t const dc_light_map[][2] = {
 	{700,  80},
 	{800,  70},
 	{900,  60},
 	{1000, 50},
 };
+#endif
 
 typedef void (*pt)(void);
 
@@ -425,14 +427,14 @@ static void refresh(void)
 
 	ctx.adc_light = adc_read(ADC_VL, NULL);
 
-	#if 0
+#if ADAPTIVE_DC == 1
 	ctx.duty_cycle = SMPS_PWM_DC;
 	for (int i = 0; i < sizeof(dc_light_map)/sizeof(dc_light_map[0]); i++) {
 		if (ctx.adc_light > dc_light_map[i][0])
 			ctx.duty_cycle = dc_light_map[i][1];
 	}
 	SMPS_SET_DC(ctx.duty_cycle);
-	#endif
+#endif
 }
 
 /**

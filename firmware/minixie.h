@@ -39,6 +39,10 @@
 #define UART_BAUD_RATE  19200
 #endif
 
+#ifndef ADAPTIVE_DC
+#define ADAPTIVE_DC     0
+#endif
+
 // OC1A = PB1
 // OC1B = PB2
 // SMPS default params
