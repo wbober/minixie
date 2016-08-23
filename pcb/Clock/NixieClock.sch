@@ -22571,9 +22571,9 @@ W = angled&lt;p&gt;
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="V1" library="supply2" deviceset="VCC" device=""/>
 <part name="C4" library="capacitor-wima" deviceset="C" device="10/6" value="0.47uF/250V"/>
-<part name="L2" library="WB" deviceset="RADIAL-CHOKE" device="4MM" value="330uH"/>
+<part name="L2" library="WB" deviceset="RADIAL-CHOKE" device="4MM" value="DLCW330 300uH/0.4A"/>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
-<part name="Q1" library="transistor-power" deviceset="PMOSFET_N" device="TO220BH" value="IRF710"/>
+<part name="Q1" library="transistor-power" deviceset="PMOSFET_N" device="TO220BH" value="IRF740"/>
 <part name="C5" library="Various" deviceset="CPOL-EU" device="" value="4.7uF/250V"/>
 <part name="JP4" library="pinhead" deviceset="PINHD-1X6" device="/90"/>
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
@@ -22655,7 +22655,10 @@ W = angled&lt;p&gt;
 <attribute name="NAME" x="-162.941" y="205.74" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-167.259" y="205.74" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="L2" gate="G$1" x="-200.66" y="226.06" rot="R90"/>
+<instance part="L2" gate="G$1" x="-200.66" y="226.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="-193.04" y="224.79" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-187.96" y="229.87" size="1.778" layer="96" rot="R180"/>
+</instance>
 <instance part="FRAME1" gate="G$1" x="-33.02" y="78.74"/>
 <instance part="Q1" gate="G$1" x="-187.96" y="208.28"/>
 <instance part="C5" gate="G$1" x="-157.48" y="213.36" smashed="yes">

@@ -1495,10 +1495,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="7.9502" y="21.2852" size="1" layer="25" ratio="10"/>
 <attribute name="VALUE" x="17.4752" y="20.0152" size="1" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="L2" library="WB" package="MURATA-CHOKE-7-4" value="330uH" x="40.2082" y="36.957" smashed="yes" rot="R270">
+<element name="L2" library="WB" package="MURATA-CHOKE-7-4" value="DLCW330 300uH/0.4A" x="40.2082" y="36.957" smashed="yes" rot="R270">
 <attribute name="NAME" x="40.315" y="41.6602" size="1" layer="21"/>
 </element>
-<element name="Q1" library="transistor-power" package="TO220BH" value="IRF710" x="28.3464" y="32.131" smashed="yes" rot="R90">
+<element name="Q1" library="transistor-power" package="TO220BH" value="IRF740" x="28.3464" y="32.131" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.1394" y="28.321" size="1" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="25.8064" y="28.194" size="1" layer="27" ratio="10" rot="R90"/>
 </element>
