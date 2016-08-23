@@ -22549,7 +22549,7 @@ W = angled&lt;p&gt;
 <part name="Q2" library="Various" deviceset="XTAL" device="" value="32kHz"/>
 <part name="V10" library="supply2" deviceset="VCC" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="JP2" library="pinhead" deviceset="PINHD-1X2" device="" value="PHOTO_SENSOR"/>
+<part name="JP2" library="pinhead" deviceset="PINHD-1X2" device="" value="LDR07 50K"/>
 <part name="V12" library="supply2" deviceset="VCC" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="0204/5" value="4k7"/>
@@ -22630,7 +22630,10 @@ W = angled&lt;p&gt;
 <instance part="Q2" gate="G$1" x="27.94" y="208.28" rot="R90"/>
 <instance part="V10" gate="G$1" x="-162.56" y="162.56"/>
 <instance part="GND11" gate="1" x="-12.7" y="205.74"/>
-<instance part="JP2" gate="G$1" x="53.34" y="121.92"/>
+<instance part="JP2" gate="G$1" x="53.34" y="121.92" smashed="yes">
+<attribute name="NAME" x="46.99" y="127.635" size="1.778" layer="95"/>
+<attribute name="VALUE" x="49.53" y="116.84" size="1.778" layer="96"/>
+</instance>
 <instance part="V12" gate="G$1" x="48.26" y="147.32" rot="MR0"/>
 <instance part="GND10" gate="1" x="48.26" y="109.22"/>
 <instance part="R6" gate="G$1" x="48.26" y="139.7" rot="R90"/>
@@ -22671,7 +22674,10 @@ W = angled&lt;p&gt;
 <instance part="GND16" gate="1" x="93.98" y="109.22" rot="MR0"/>
 <instance part="R3" gate="G$1" x="-193.04" y="200.66" rot="R90"/>
 <instance part="J1" gate="G$1" x="-223.52" y="152.4"/>
-<instance part="SG1" gate="G$1" x="-5.08" y="124.46" rot="R270"/>
+<instance part="SG1" gate="G$1" x="-5.08" y="124.46" smashed="yes" rot="R270">
+<attribute name="NAME" x="2.54" y="125.73" size="1.778" layer="95"/>
+<attribute name="VALUE" x="2.54" y="119.38" size="1.778" layer="96"/>
+</instance>
 <instance part="D3" gate="G$1" x="-124.46" y="218.44" rot="R90"/>
 <instance part="D4" gate="G$1" x="-124.46" y="203.2" rot="R90"/>
 <instance part="V3" gate="G$1" x="-124.46" y="233.68"/>
